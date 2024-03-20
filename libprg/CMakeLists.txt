@@ -11,7 +11,14 @@ set(SOURCES
        "${CMAKE_CURRENT_LIST_DIR}/src/libprg/libprg.c"       
 )
 
-add_library(libprg)
+add_library(libprg
+        src/libprg/lista_linear.c
+        src/libprg/criar_lista.c
+        src/libprg/inserir.c
+        src/libprg/remover.c
+        src/libprg/busca_binaria_interativa.c
+        src/libprg/busca_binaria_recursiva.c
+)
 target_sources(libprg PUBLIC ${SOURCES})
 target_include_directories(libprg PUBLIC ${CMAKE_CURRENT_LIST_DIR}/src/include)
 
